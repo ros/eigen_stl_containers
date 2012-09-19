@@ -34,10 +34,26 @@
 
 /* Author: Ioan Sucan */
 
-#ifndef EIGEN_STL_CONTAINERS_EIGEN_STL_CONTAINERS_
-#define EIGEN_STL_CONTAINERS_EIGEN_STL_CONTAINERS_
+#ifndef EIGEN_STL_CONTAINERS_EIGEN_STL_VECTOR_CONTAINER_
+#define EIGEN_STL_CONTAINERS_EIGEN_STL_VECTOR_CONTAINER_
 
-#include "eigen_stl_containers/eigen_stl_vector_container.h"
-#include "eigen_stl_containers/eigen_stl_map_container.h"
+#include <Eigen/Core>
+#include <Eigen/Geometry>
+#include <Eigen/StdVector>
+
+#include <vector>
+
+/** \brief Typedef's for STL containers of Eigen types with proper memory alignment. */
+namespace EigenSTL
+{
+
+typedef std::vector<Eigen::Vector3f, Eigen::aligned_allocator<Eigen::Vector3f> > vector_Vector3f;
+typedef std::vector<Eigen::Vector3d, Eigen::aligned_allocator<Eigen::Vector3d> > vector_Vector3d;
+typedef std::vector<Eigen::Vector4f, Eigen::aligned_allocator<Eigen::Vector4f> > vector_Vector4f;
+typedef std::vector<Eigen::Affine3d, Eigen::aligned_allocator<Eigen::Affine3d> > vector_Affine3d;
+typedef std::vector<Eigen::Affine3f, Eigen::aligned_allocator<Eigen::Affine3f> > vector_Affine3f;
+
+}
+
 
 #endif
