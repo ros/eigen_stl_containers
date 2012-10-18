@@ -1,4 +1,4 @@
-<stack>
+<package>
   <name>eigen_stl_containers</name>
   <version>0.1.1</version>
   <description>This package provides a set of typedef's that allow
@@ -6,11 +6,10 @@
   <author email="isucan@willowgarage.com">Ioan Sucan</author>
   <maintainer email="isucan@willowgarage.com">Ioan Sucan</maintainer>
   <license>BSD</license>
-  <copyright>Willow Garage</copyright>
 
   <url>http://eigen.tuxfamily.org/dox/TopicUnalignedArrayAssert.html</url>
 
-  <build_depends>catkin</build_depends>
-  <depends>eigen</depends>
+  <build_depend>catkin</build_depend>
+  <run_depend>eigen</run_depend>
 
-</stack>
+</package>

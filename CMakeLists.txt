@@ -1,10 +1,8 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8.3)
 project(eigen_stl_containers)
 
 find_package(catkin REQUIRED)
-catkin_stack()
-
-catkin_project(${PROJECT_NAME} INCLUDE_DIRS include)
+catkin_package()
 
 install(DIRECTORY include/
         DESTINATION include
