@@ -2,8 +2,8 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.5 (2016-03-23)
+------------------
 * Merge pull request `#3 <https://github.com/ros/eigen_stl_containers/issues/3>`_ from scpeters/patch-1
   add links to repository and issue tracker
 * add links to repository and issue tracker
