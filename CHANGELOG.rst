@@ -2,6 +2,11 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fixed exporting of eigen3 depends (`#6 <https://github.com/ros/eigen_stl_containers/issues/6>`_)
+* Contributors: Kei Okada
+
 0.1.5 (2016-03-23)
 ------------------
 * Merge pull request `#3 <https://github.com/ros/eigen_stl_containers/issues/3>`_ from scpeters/patch-1
