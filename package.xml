@@ -1,6 +1,6 @@
 <package>
   <name>eigen_stl_containers</name>
-  <version>0.1.5</version>
+  <version>0.1.6</version>
   
   <description>This package provides a set of typedef's that allow
   using Eigen datatypes in STL containers</description>
