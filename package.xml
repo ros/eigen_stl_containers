@@ -5,7 +5,8 @@
   <description>This package provides a set of typedef's that allow
   using Eigen datatypes in STL containers</description>
   <author email="isucan@willowgarage.com">Ioan Sucan</author>
-  <maintainer email="isucan@willowgarage.com">Ioan Sucan</maintainer>
+  <maintainer email="clalancette@osrfoundation.org">Chris Lalancette</maintainer>
+  <maintainer email="sloretz@osrfoundation.org">Shane Loretz</maintainer>
   <license>BSD</license>
 
   <url>http://eigen.tuxfamily.org/dox/TopicUnalignedArrayAssert.html</url>
