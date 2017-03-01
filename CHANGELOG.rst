@@ -2,6 +2,12 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* install headers to CATKIN_PACKAGE_INCLUDE_DESTINATION (`#4 <https://github.com/ros/eigen_stl_containers/issues/4>`_)
+* Added more typedefs for std::vectors of Eigen types (`#8 <https://github.com/ros/eigen_stl_containers/issues/8>`_)
+* Contributors: Michael Görner, Victor Lamoine
+
 0.1.6 (2016-09-28)
 ------------------
 * Fixed exporting of eigen3 depends (`#6 <https://github.com/ros/eigen_stl_containers/issues/6>`_)
