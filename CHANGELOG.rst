@@ -2,6 +2,11 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix it up so we can correctly find Eigen everywhere.
+* Contributors: Chris Lalancette, Kei Okada
+
 0.1.7 (2017-03-01)
 ------------------
 * install headers to CATKIN_PACKAGE_INCLUDE_DESTINATION (`#4 <https://github.com/ros/eigen_stl_containers/issues/4>`_)
