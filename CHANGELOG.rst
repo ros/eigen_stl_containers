@@ -2,8 +2,8 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.8 (2017-03-10)
+------------------
 * Fix it up so we can correctly find Eigen everywhere.
 * Contributors: Chris Lalancette, Kei Okada
 
