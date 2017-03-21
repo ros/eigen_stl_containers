@@ -58,5 +58,4 @@ typedef std::vector<Eigen::Isometry3d, Eigen::aligned_allocator<Eigen::Isometry3
 
 }
 
-
 #endif
