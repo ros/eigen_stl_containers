@@ -1,7 +1,7 @@
-<package>
+<package format="2">
   <name>eigen_stl_containers</name>
   <version>0.1.8</version>
-  
+
   <description>This package provides a set of typedef's that allow
   using Eigen datatypes in STL containers</description>
   <author email="isucan@willowgarage.com">Ioan Sucan</author>
@@ -17,6 +17,6 @@
 
   <build_depend>cmake_modules</build_depend>
   <build_depend>eigen</build_depend>
-  <run_depend>eigen</run_depend>
 
+  <build_export_depend>eigen</build_export_depend>
 </package>
