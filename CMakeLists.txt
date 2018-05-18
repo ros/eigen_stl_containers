@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(eigen_stl_containers)
 
 find_package(catkin REQUIRED)
+add_definitions(-std=c++11)
 
 # We don't build anything here, but in order to export the right
 # build flags in catkin_package(), we still have to find Eigen3 here.  Note

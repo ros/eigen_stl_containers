@@ -47,14 +47,17 @@
 namespace EigenSTL
 {
 
-typedef std::vector<Eigen::Vector3f, Eigen::aligned_allocator<Eigen::Vector3f> > vector_Vector3f;
-typedef std::vector<Eigen::Vector3d, Eigen::aligned_allocator<Eigen::Vector3d> > vector_Vector3d;
-typedef std::vector<Eigen::Vector4f, Eigen::aligned_allocator<Eigen::Vector4f> > vector_Vector4f;
-typedef std::vector<Eigen::Vector4d, Eigen::aligned_allocator<Eigen::Vector4d> > vector_Vector4d;
-typedef std::vector<Eigen::Affine3f, Eigen::aligned_allocator<Eigen::Affine3f> > vector_Affine3f;
-typedef std::vector<Eigen::Affine3d, Eigen::aligned_allocator<Eigen::Affine3d> > vector_Affine3d;
-typedef std::vector<Eigen::Isometry3f, Eigen::aligned_allocator<Eigen::Isometry3f> > vector_Isometry3f;
-typedef std::vector<Eigen::Isometry3d, Eigen::aligned_allocator<Eigen::Isometry3d> > vector_Isometry3d;
+template <typename T>
+using AlignedVector = std::vector<T, Eigen::aligned_allocator<T>>;
+
+using vector_Vector3f = AlignedVector<Eigen::Vector3f>;
+using vector_Vector3d = AlignedVector<Eigen::Vector3d>;
+using vector_Vector4f = AlignedVector<Eigen::Vector4f>;
+using vector_Vector4d = AlignedVector<Eigen::Vector4d>;
+using vector_Affine3f = AlignedVector<Eigen::Affine3f>;
+using vector_Affine3d = AlignedVector<Eigen::Affine3d>;
+using vector_Isometry3f = AlignedVector<Eigen::Isometry3f>;
+using vector_Isometry3d = AlignedVector<Eigen::Isometry3d>;
 
 }
 

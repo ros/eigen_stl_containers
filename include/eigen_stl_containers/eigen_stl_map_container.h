@@ -47,17 +47,13 @@
 namespace EigenSTL
 {
 
-typedef std::map<std::string, Eigen::Vector3d, std::less<std::string>,
-                 Eigen::aligned_allocator<std::pair<const std::string, Eigen::Vector3d> > > map_string_Vector3d;
+template <typename Key, typename Value>
+using AlignedMap = std::map<Key, Value, std::less<Key>, Eigen::aligned_allocator<std::pair<const Key, Value>>>;
 
-typedef std::map<std::string, Eigen::Vector3f, std::less<std::string>,
-                 Eigen::aligned_allocator<std::pair<const std::string, Eigen::Vector3f> > > map_string_Vector3f;
-
-typedef std::map<std::string, Eigen::Affine3d, std::less<std::string>,
-                 Eigen::aligned_allocator<std::pair<const std::string, Eigen::Affine3d> > > map_string_Affine3d;
-
-typedef std::map<std::string, Eigen::Affine3f, std::less<std::string>,
-                 Eigen::aligned_allocator<std::pair<const std::string, Eigen::Affine3f> > > map_string_Affine3f;
+using map_string_Vector3d = AlignedMap<std::string, Eigen::Vector3d>;
+using map_string_Vector3f = AlignedMap<std::string, Eigen::Vector3f>;
+using map_string_Affine3d = AlignedMap<std::string, Eigen::Affine3d>;
+using map_string_Affine3f = AlignedMap<std::string, Eigen::Affine3f>;
 
 }
 
