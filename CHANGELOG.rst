@@ -2,6 +2,11 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.9 (2019-02-04)
+------------------
+* Port to ROS 2
+* Contributor: Víctor Mayoral Vilches
+
 0.1.8 (2017-03-10)
 ------------------
 * Fix it up so we can correctly find Eigen everywhere.
