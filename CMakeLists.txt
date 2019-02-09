@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(eigen_stl_containers)
 
-if(NOT WIN32)
-  add_definitions(-std=c++11)
-endif()
-
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -15,7 +11,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
-find_package(Eigen3 QUIET)
+find_package(Eigen3 REQUIRED)
 if(NOT EIGEN3_FOUND)
   # saucy does not have Eigen3, but have Eigen instead
   find_package(Eigen REQUIRED)
