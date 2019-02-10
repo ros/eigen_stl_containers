@@ -1,31 +1,21 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(eigen_stl_containers)
 
-find_package(catkin REQUIRED)
-
-# We don't build anything here, but in order to export the right
-# build flags in catkin_package(), we still have to find Eigen3 here.  Note
-# that this is somewhat complicated because of our need to support Ubuntu
-# all the way back to saucy.  First we look for the Eigen3 cmake module
-# provided by the libeigen3-dev on newer Ubuntu.  If that fails, then we
-# fall-back to the version provided by cmake_modules, which is a stand-in.
-find_package(Eigen3 QUIET)
-if(NOT EIGEN3_FOUND)
-  # saucy does not have Eigen3, but have Eigen instead
-  find_package(cmake_modules REQUIRED)
-  find_package(Eigen REQUIRED)
-  set(EIGEN3_INCLUDE_DIRS ${EIGEN_INCLUDE_DIRS})
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
 endif()
 
-# Note that eigen 3.2 (on Ubuntu Wily) only provides EIGEN3_INCLUDE_DIR,
-# not EIGEN3_INCLUDE_DIRS, so we have to set the latter from the former.
-if(NOT EIGEN3_INCLUDE_DIRS)
-  set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-catkin_package(
-  INCLUDE_DIRS include ${EIGEN3_INCLUDE_DIRS})
+find_package(ament_cmake REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 install(DIRECTORY include/${PROJECT_NAME}/
-        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+        DESTINATION include/${PROJECT_NAME}
         FILES_MATCHING PATTERN "*.h")
+
+ament_export_include_directories(include ${EIGEN3_INCLUDE_DIRS})
+ament_package()
