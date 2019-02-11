@@ -2,6 +2,13 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Port package to ROS 2 (`#16 <https://github.com/ros/eigen_stl_containers/issues/16>`_)
+* Switch to package.xml format 2.
+* Make sure to include <functional>
+* Contributors: Chris Lalancette, Víctor Mayoral Vilches
+
 0.1.8 (2017-03-10)
 ------------------
 * Fix it up so we can correctly find Eigen everywhere.
