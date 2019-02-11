@@ -2,8 +2,8 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2019-02-11)
+------------------
 * Port package to ROS 2 (`#16 <https://github.com/ros/eigen_stl_containers/issues/16>`_)
 * Switch to package.xml format 2.
 * Make sure to include <functional>
