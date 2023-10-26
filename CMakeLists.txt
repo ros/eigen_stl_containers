@@ -13,28 +13,29 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(Eigen3 REQUIRED)
 
-add_library(${PROJECT_NAME} INTERFACE
-  include/${PROJECT_NAME}/eigen_stl_containers.h
-  include/${PROJECT_NAME}/eigen_stl_map_container.h
-  include/${PROJECT_NAME}/eigen_stl_vector_container.h
-)
+add_library(${PROJECT_NAME} INTERFACE)
 
 target_link_libraries(${PROJECT_NAME} INTERFACE Eigen3::Eigen)
-ament_export_targets(${PROJECT_NAME}Targets)
-ament_export_dependencies(Eigen3)
+target_include_directories(${PROJECT_NAME} INTERFACE
+  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
 
 install(
-  DIRECTORY include/${PROJECT_NAME}/
+  DIRECTORY include/
   DESTINATION include/${PROJECT_NAME}
 )
 
 install(
   TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME}Targets
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-  RUNTIME DESTINATION bin
-  INCLUDES DESTINATION include
 )
+
+# Export old-style CMake variables
+ament_export_include_directories("include/${PROJECT_NAME}")
+
+# Export modern CMake targets
+ament_export_targets(${PROJECT_NAME}Targets)
+
+ament_export_dependencies(Eigen3)
 
 ament_package()
