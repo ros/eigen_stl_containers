@@ -2,8 +2,8 @@
 Changelog for package eigen_stl_containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.0 (2025-01-24)
+------------------
 * CMakeLists.txt: fixing relocatable package issue (`#19 <https://github.com/ros/eigen_stl_containers/issues/19>`_)
 * Contributors: Matthias Schoepfer
 
